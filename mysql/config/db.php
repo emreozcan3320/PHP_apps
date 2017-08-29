@@ -1,11 +1,9 @@
 <?php
-  //Create Connection to Database
-  $conn = mysqli_connect('localhost','root','','phpblog');
+	// Create Connection
+	$conn = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
-  //check the Connection
-  if (mysqli_connect_errno()) {
-    //connection failed
-    echo 'Failed to connect to MySQL'.mysqli.connect_errno();
-  }
-
- ?>
+	// Check Connection
+	if(mysqli_connect_errno()){
+		// Connection Failed
+		echo 'Failed to connect to MySQL '. mysqli_connect_errno();
+	}
